@@ -1,0 +1,65 @@
+// SPDX-License-Identifier: (GPL-2.0-only OR BSD-3-Clause)
+/*
+ * Copyright (C) STMicroelectronics 2023 - All Rights Reserved
+ * Author: Francois Choleau <francois.choleau@st.com> for STMicroelectronics.
+ */
+
+ /dts-v1/;
+
+#include "stm32mp257f-ev1-revB-ca35tdcid-ostl.dts"
+
+/ {
+	model = "STMicroelectronics STM32MP257F-RevB-EV1 CA35TDCID OSTL Evaluation Board";
+	compatible = "st,stm32mp257f-ev1-revB-ca35tdcid-ostl-m33-examples", "st,stm32mp257f-ev1-revB-ca35tdcid-ostl", "st,stm32mp257f-ev1-revB", "st,stm32mp257-revA";
+};
+
+&i2c_rpmsg {
+	/delete-node/ typec@35;
+};
+
+&spi8 {
+	status = "disabled";
+};
+
+&usb2_phy2 {
+	st,internal-vbus-comp;
+};
+
+&usb3dr {
+
+	dwc3: usb@48300000 {
+
+		dr_mode = "peripheral";
+		/delete-property/ usb-role-switch;
+		/delete-node/ port;
+	};
+};
+
+&timers8 {
+	status = "disabled";
+};
+
+&crc {
+	status = "disabled";
+};
+
+&lptimer4 {
+	status = "disabled";
+};
+
+&hpdma3 {
+	status = "disabled";
+};
+
+&eth1 {
+	status = "disabled";
+};
+
+&switch0 {
+	status = "disabled";
+};
+
+&timers6 {
+	status = "disabled";
+};
+

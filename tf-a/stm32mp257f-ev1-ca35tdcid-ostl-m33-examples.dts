@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: (GPL-2.0-only OR BSD-3-Clause)
+/*
+ * Copyright (C) STMicroelectronics 2021 - All Rights Reserved
+ * Author: Lionel Vitte <lionel.vitte@st.com> for STMicroelectronics.
+ */
+
+/dts-v1/;
+
+#include "stm32mp257f-ev1-ca35tdcid-ostl.dts"
+
+/ {
+	model = "STMicroelectronics STM32MP257F-EV1 CA35TDCID OSTL M33 EXAMPLES Evaluation Board";
+	compatible = "st,stm32mp257f-ev1-ca35tdcid-ostl-m33-examples", "st,stm32mp257f-ev1", "st,stm32mp257";
+};
